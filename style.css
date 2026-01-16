@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* theme */
+:root {
+  --bg: #fff7ed;          /* background of cream color */
+  --text: #374151;        /* normal text */
+  --primary: #ef4444;     /* red */
+  --card: #fff3c4;        /* light yellow */
+  --accent: #ec4899;      /* pink */
+
+  --heading: #3f1d1d;     /* dark brown heading light mode */
+}
+
+/* Dark Mode */
+body.dark {
+  --bg: #1f1f1f;
+  --text: #e5e7eb;
+  --card: #2a2a2a;
+
+  --heading: #f9fafb;     /* light heading for dark mode */
+}
+
+/* styles */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+h1, h2, h3 {
+  color: var(--heading);
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--heading);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Hero section */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #6b7280;
+}
+
+/* primary button */
+.primary-btn {
+  padding: 12px 30px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: var(--accent);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.45);
+}
+
+/* Service Section*/
+.services {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.35);
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--card);
+  margin-top: 40px;
+  color: var(--heading);
+}
+
+/* for mobilephone */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
